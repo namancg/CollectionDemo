@@ -16,6 +16,7 @@ public class CollectionsDemo {
 		doStackDemo();
 		doQueueDemo();
 		doSetDemo();
+		doMapDemo();
 
 	}
 
@@ -87,6 +88,19 @@ public class CollectionsDemo {
 		set.add("Ajay");
 		for(String element : set) {
 			System.out.println(element);
+		}
+	}
+	
+	private static void doMapDemo() {
+		
+		System.out.println("Map Demo");
+		Map<Integer,String> map = new HashMap<>();
+		map.put(100,"Ravi");
+		map.put(99,"Vjay");
+		map.put(102,"Ravi");
+		map.put(104,"Ajay");		
+		for(Map.Entry mapElement : map.entrySet()) {
+			System.out.println(mapElement.getKey()+" - "+mapElement.getValue());
 		}
 	}
 
