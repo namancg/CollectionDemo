@@ -13,6 +13,8 @@ public class CollectionsDemo {
 	public static void main(String[] args) {
 
 		doListDemo();
+		doStackDemo();
+
 	}
 
 	private static void doListDemo() {
@@ -29,5 +31,25 @@ public class CollectionsDemo {
 		}
 
 	}
+
+	private static void doStackDemo() {
+		System.out.println("Stack Demo");
+
+		Stack<String> stack = new Stack<>();
+
+		stack.push("Ravi");
+		stack.push("Amit");
+		stack.push("Garima");
+		stack.push("Ashish");
+		String pop = stack.pop();
+		System.out.println("Popped Element : " + pop);
+		Iterator iterator = stack.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+
+	}
+
+	
 
 }
