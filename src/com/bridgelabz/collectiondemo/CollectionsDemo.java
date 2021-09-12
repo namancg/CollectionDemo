@@ -15,7 +15,8 @@ public class CollectionsDemo {
 		doListDemo();
 		doStackDemo();
 		doQueueDemo();
-		
+		doSetDemo();
+
 	}
 
 	private static void doListDemo() {
@@ -74,6 +75,19 @@ public class CollectionsDemo {
 			System.out.println(iterator.next());
 		}
 
+	}
+	
+	private static void doSetDemo() {
+		System.out.println("Set Demo");
+		Set<String> set = new LinkedHashSet<>();
+
+		set.add("Ravi");
+		set.add("Vjay");
+		set.add("Ravi");
+		set.add("Ajay");
+		for(String element : set) {
+			System.out.println(element);
+		}
 	}
 
 }
