@@ -14,7 +14,8 @@ public class CollectionsDemo {
 
 		doListDemo();
 		doStackDemo();
-
+		doQueueDemo();
+		
 	}
 
 	private static void doListDemo() {
@@ -50,6 +51,29 @@ public class CollectionsDemo {
 
 	}
 
-	
+	private static void doQueueDemo() {
+		System.out.println("Queue Demo");
+
+		PriorityQueue<String> queue = new PriorityQueue<>();
+		queue.add("Amit Sharma");
+		queue.add("Vijay Raj");
+		queue.add("JaiShankar");
+		queue.add("Raj");
+		System.out.println("Head : " + queue.element());
+		System.out.println("Head : " + queue.peek());
+		System.out.println("Iterating Queue Elememts : ");
+		Iterator iterator = queue.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		queue.remove();
+		queue.poll();
+		System.out.println("Queue Elememts after removing two elements are : ");
+		iterator = queue.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+
+	}
 
 }
